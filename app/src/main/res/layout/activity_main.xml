@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World! This is my first Mobile App!"
+        android:text="@string/hello_world_this_is_my_first_mobile_app"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,7 +21,7 @@
         android:id="@+id/myFirstButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ABOUT"
+        android:text="@string/about"
         android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -35,11 +35,15 @@
         android:id="@+id/mySecondButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:layout_marginTop="22dp"
-        android:text="More..."
+        android:layout_marginBottom="132dp"
+        android:text="@string/more"
         android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myFirstButton" />
+        app:layout_constraintTop_toBottomOf="@+id/myFirstButton"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">NUMAD21Fa_KristineUmeh</string>
     <string name="trying_back_button">Trying out the back button!</string>
+    <string name="hello_world_this_is_my_first_mobile_app">Hello World! This is my first Mobile App!</string>
+    <string name="about">ABOUT</string>
+    <string name="more">More...</string>
 </resources>
