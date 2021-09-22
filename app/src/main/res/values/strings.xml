@@ -5,4 +5,11 @@
     <string name="about">ABOUT</string>
     <string name="more">More...</string>
     <string name="clicky">CLICKY CLICKY</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="f">F</string>
+    <string name="d">D</string>
+    <string name="c">C</string>
+    <string name="e">E</string>
+    <string name="pressed">Pressed:</string>
 </resources>
