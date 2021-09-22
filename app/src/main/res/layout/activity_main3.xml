@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <Button
+        android:id="@+id/letter_a"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:text="A"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <Button
+        android:id="@+id/letter_b"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:text="B"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <Button
+        android:id="@+id/letter_f"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:text="F"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/letter_d"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:text="D"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/letter_c"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:text="C"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <Button
+        android:id="@+id/letter_e"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:text="E"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressed:  "
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="357dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
