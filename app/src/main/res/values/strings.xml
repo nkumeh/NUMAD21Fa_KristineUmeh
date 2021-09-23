@@ -3,13 +3,20 @@
     <string name="trying_back_button">Trying out the back button!</string>
     <string name="hello_world_this_is_my_first_mobile_app">Hello World! This is my first Mobile App!</string>
     <string name="about">ABOUT</string>
-    <string name="more">More...</string>
+    <string name="more">MORE…</string>
     <string name="clicky">CLICKY CLICKY</string>
     <string name="letter_a">A</string>
     <string name="letter_b">B</string>
-    <string name="letter_f">F</string>
-    <string name="letter_d">D</string>
     <string name="letter_c">C</string>
+    <string name="letter_d">D</string>
     <string name="letter_e">E</string>
+    <string name="letter_f">F</string>
+    <string name="def">Pressed:-</string>
     <string name="pressed">Pressed:</string>
+    <string name="clickA">Pressed: A</string>
+    <string name="clickB">Pressed: B</string>
+    <string name="clickC">Pressed: C</string>
+    <string name="clickD">Pressed: D</string>
+    <string name="clickE">Pressed: E</string>
+    <string name="clickF">Pressed: F</string>
 </resources>
