@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
+        app:layout_constraintVertical_bias="0.498"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -57,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.498" />
 
     <Button
         android:id="@+id/letter_c"
@@ -82,13 +82,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
+        app:layout_constraintVertical_bias="0.498"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/pressed"
-        android:layout_width="185dp"
-        android:layout_height="106dp"
+        android:layout_width="192dp"
+        android:layout_height="78dp"
         android:text="@string/pressed"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -97,6 +97,6 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.852" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
