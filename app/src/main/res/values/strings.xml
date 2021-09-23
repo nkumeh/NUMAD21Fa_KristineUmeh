@@ -11,8 +11,7 @@
     <string name="letter_d">D</string>
     <string name="letter_e">E</string>
     <string name="letter_f">F</string>
-    <string name="def">Pressed:-</string>
-    <string name="pressed">Pressed:</string>
+    <string name="pressed">Pressed: -</string>
     <string name="clickA">Pressed: A</string>
     <string name="clickB">Pressed: B</string>
     <string name="clickC">Pressed: C</string>

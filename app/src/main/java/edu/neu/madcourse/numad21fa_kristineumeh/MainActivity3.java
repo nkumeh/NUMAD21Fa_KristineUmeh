@@ -59,7 +59,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
                 textView.setText(R.string.clickF);
                 break;
             default:
-                textView.setText(R.string.def);
+                textView.setText(R.string.pressed);
                 break;
         }
     }
