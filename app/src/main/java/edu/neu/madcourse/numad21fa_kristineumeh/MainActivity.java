@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "Nnemka's Mobile App";
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("nu inc.");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("nu inc.");
         //make button do things
         //get button
         Button button = (Button) findViewById(R.id.myFirstButton);
