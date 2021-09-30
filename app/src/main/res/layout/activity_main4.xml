@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FBE2EB"
+    android:id="@+id/constraintLayout"
     tools:context=".MainActivity4">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -20,25 +21,11 @@
         app:fab_title="Click to add Link"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887"
+        app:layout_constraintVertical_bias="0.878"
         app:srcCompat="@color/ic_launcher_nu_background" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_500"
-        android:text="@string/welcome_click_to_add_a_link"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472" />
 
     <TextView
         android:id="@+id/textView4"
@@ -55,4 +42,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.108" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="494dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
