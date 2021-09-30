@@ -18,5 +18,7 @@
     <string name="clickD">Pressed: D</string>
     <string name="clickE">Pressed: E</string>
     <string name="clickF">Pressed: F</string>
-    <string name="link_collector">Link Collector</string>
+    <string name="link_collector">LINK COLLECTOR</string>
+    <string name="welcome_click_to_add_a_link">Welcome! Click to add a Link!</string>
+    <string name="link_collector_page">Link Collector Page</string>
 </resources>
