@@ -5,10 +5,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Objects;
 
 public class MainActivity4 extends AppCompatActivity {
 
@@ -19,6 +22,7 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         constraintLayout = findViewById(R.id.constraintLayout);
         fab = findViewById(R.id.fab1);
@@ -32,7 +36,10 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
     public void snackBar() {
-        Snackbar snackbar = Snackbar.make(constraintLayout,"You have added a link",Snackbar.LENGTH_SHORT);
+        Snackbar snackbar = Snackbar.make(constraintLayout,"Action Successful",Snackbar.LENGTH_SHORT);
         snackbar.show();
+
+//        Snackbar snackbar2 = Snackbar2.make(constraintLayout,"Action Unsuccessful",Snackbar.LENGTH_SHORT);
+//        snackbar2.show();
     }
 }
