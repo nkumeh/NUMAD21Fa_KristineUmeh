@@ -20,5 +20,11 @@
     <string name="clickF">Pressed: F</string>
     <string name="link_collector">LINK COLLECTOR</string>
     <string name="welcome_click_to_add_a_link">Welcome! Click to add a Link!</string>
-    <string name="link_collector_page">Link Collector Page</string>
+    <string name="link_collector_page">LINK COLLECTOR PAGE</string>
+    <string name="add_link">Add Link</string>
+    <string name="link_name">Link Name</string>
+    <string name="link_url">Link URL</string>
+    <string name="lnk_name">Link name</string>
+    <string name="lnk_url">URL</string>
+
 </resources>
