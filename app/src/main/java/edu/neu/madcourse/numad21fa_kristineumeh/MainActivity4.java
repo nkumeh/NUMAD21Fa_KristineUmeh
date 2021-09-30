@@ -3,6 +3,7 @@ package edu.neu.madcourse.numad21fa_kristineumeh;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -29,8 +30,13 @@ public class MainActivity4 extends AppCompatActivity {
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
+//            public void onClick(View view) {
+//                snackBar();
+//            }
             public void onClick(View view) {
-                snackBar();
+                Intent intent;
+                intent = new Intent(MainActivity4.this, MainActivity5.class);
+                startActivity(intent);
             }
         });
     }

@@ -11,7 +11,8 @@
         android:theme="@style/Theme.NUMAD21Fa_KristineUmeh">
         <activity
             android:name=".MainActivity5"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity4"/>
         <activity
             android:name=".MainActivity4"
             android:exported="true"
