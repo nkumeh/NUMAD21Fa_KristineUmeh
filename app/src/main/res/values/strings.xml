@@ -18,4 +18,5 @@
     <string name="clickD">Pressed: D</string>
     <string name="clickE">Pressed: E</string>
     <string name="clickF">Pressed: F</string>
+    <string name="link_collector">Link Collector</string>
 </resources>
