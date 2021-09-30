@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity4 extends AppCompatActivity {
 
@@ -14,6 +16,7 @@ public class MainActivity4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
+        //Declare the fab and assign
         FloatingActionButton fab;
 
         fab = findViewById(R.id.fab1);
@@ -21,7 +24,7 @@ public class MainActivity4 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(MainActivity4.this,"Click",Toast.LENGTH_SHORT).show();
             }
         });
     }
