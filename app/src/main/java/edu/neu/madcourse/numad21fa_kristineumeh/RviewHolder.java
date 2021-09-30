@@ -21,7 +21,10 @@ public class RviewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 if (linkListener != null){
-
+                    int position = getLayoutPosition();
+                    if (position != RecyclerView.NO_POSITION){
+                        linkListener.clickItem(position);
+                    }
                 }
             }
         });
