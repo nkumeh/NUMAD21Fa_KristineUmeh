@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009688"
+    android:background="#FBE2EB"
     tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="342dp"
         android:layout_height="58dp"
-        android:background="@color/purple_500"
+        android:background="@color/ic_launcher_nu_background"
         android:text="@string/trying_back_button"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -19,9 +19,11 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.233"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/click_button"
@@ -35,6 +37,7 @@
         android:textSize="25sp"
         android:textStyle="bold"
         android:visibility="visible"
+        app:backgroundTint="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

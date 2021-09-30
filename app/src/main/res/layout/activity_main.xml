@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBE2EB"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="339dp"
         android:layout_height="69dp"
         android:background="@color/purple_500"
+        android:gravity="center_horizontal"
         android:text="@string/hello_world_this_is_my_first_mobile_app"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -31,6 +33,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
+        app:backgroundTint="@color/ic_launcher_nu_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
@@ -46,6 +49,7 @@
         android:text="@string/more"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:backgroundTint="@color/ic_launcher_nu_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.875"
@@ -59,6 +63,7 @@
         android:layout_height="wrap_content"
         android:text="@string/link_collector"
         android:textSize="20sp"
+        app:backgroundTint="@color/ic_launcher_nu_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
