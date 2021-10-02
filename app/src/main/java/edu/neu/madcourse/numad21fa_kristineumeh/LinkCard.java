@@ -20,10 +20,6 @@ public class LinkCard implements LinkClickListener {
         return linkUrl;
     }
 
-    public boolean isClicked() {
-        return isClicked;
-    }
-
     @Override
     public void clickItem(int position) {
         isClicked = !isClicked;

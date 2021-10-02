@@ -3,6 +3,7 @@ package edu.neu.madcourse.numad21fa_kristineumeh;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
-public class RecyclerViewLists extends AppCompatActivity implements DialogBox.DialogueBoxListener {
+public class RecyclerViewLists extends AppCompatActivity implements DialogBox.DialogBoxListener {
 
     private ArrayList<LinkCard> listOfLinks = new ArrayList<>();
 
@@ -98,12 +99,12 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
     });
 
     @Override
-    public void applyText(String linkName, String linkUrl) {
-
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        addItem(0);
     }
 
     @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
+    public void onDialogNegativeClick(DialogFragment dialog) {
 
     }
 }

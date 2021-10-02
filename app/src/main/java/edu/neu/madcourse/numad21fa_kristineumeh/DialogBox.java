@@ -11,14 +11,13 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
-
-import java.util.Objects;
+import androidx.fragment.app.DialogFragment;
 
 public class DialogBox extends AppCompatDialogFragment {
 
     private EditText linkName;
     private EditText linkUrl;
-    private DialogueBoxListener listener;
+    private DialogBoxListener listener;
 
 
     @NonNull
@@ -29,7 +28,7 @@ public class DialogBox extends AppCompatDialogFragment {
 
         LayoutInflater inflater = requireActivity().getLayoutInflater();
 
-        View view = inflater.inflate(R.layout.dialogue_display,null);
+        View view = inflater.inflate(R.layout.dialog_display,null);
 
         builder.setView(view).setTitle("Add Link")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -44,9 +43,6 @@ public class DialogBox extends AppCompatDialogFragment {
               }
           });
 
-//        linkName = view.findViewById(R.id.editName);
-//        linkUrl = view.findViewById(R.id.editUrl);
-
         return builder.create();
     }
 
@@ -55,14 +51,17 @@ public class DialogBox extends AppCompatDialogFragment {
         super.onAttach(context);
 
         try{
-            listener = (DialogueBoxListener) context;
+            listener = (DialogBoxListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString() + "Please input value");
         }
     }
 
-    public interface DialogueBoxListener {
-        void applyText(String linkName, String linkUrl);
+    public interface DialogBoxListener {
+        public void onDialogPositiveClick(DialogFragment dialog);
+        public void onDialogNegativeClick(DialogFragment dialog);
     }
+
+
 
 }
