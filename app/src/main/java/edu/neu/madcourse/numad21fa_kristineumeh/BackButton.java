@@ -9,12 +9,12 @@ import android.widget.Button;
 
 import java.util.Objects;
 
-public class MainActivity2 extends AppCompatActivity {
+public class BackButton extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.back_button_test);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Button clickButton = (Button) findViewById(R.id.click_button);
@@ -23,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(MainActivity2.this, MainActivity3.class);
+                intent = new Intent(BackButton.this, ClickyClicky.class);
                 startActivity(intent);
             }
         });

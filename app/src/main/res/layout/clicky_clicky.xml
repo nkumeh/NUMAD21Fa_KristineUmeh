@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FBE2EB"
-    tools:context=".MainActivity3">
+    tools:context=".ClickyClicky">
 
     <Button
         android:id="@+id/letter_a"

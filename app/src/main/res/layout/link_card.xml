@@ -8,39 +8,39 @@
 
     <RelativeLayout
         android:layout_width="397dp"
-        android:layout_height="95dp"
+        android:layout_height="167dp"
         android:layout_margin="5dp">
 
         <TextView
-            android:id="@+id/lnkName"
+            android:id="@+id/linkName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="281dp"
-            android:layout_marginRight="281dp"
-            android:layout_marginBottom="52dp"
-            android:text="@string/lnk_name"
+            android:layout_marginEnd="285dp"
+            android:layout_marginRight="285dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/link_name"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/lnkUrl"
-            android:layout_width="73dp"
-            android:layout_height="33dp"
+            android:id="@+id/linkUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="317dp"
-            android:layout_marginRight="317dp"
-            android:layout_marginBottom="6dp"
-            android:text="@string/lnk_url"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="318dp"
+            android:layout_marginRight="318dp"
+            android:layout_marginBottom="98dp"
+            android:text="@string/link_url"
             android:textSize="24sp" />
     </RelativeLayout>
 

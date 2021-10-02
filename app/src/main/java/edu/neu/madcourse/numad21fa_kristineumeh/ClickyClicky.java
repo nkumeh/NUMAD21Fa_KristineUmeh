@@ -7,16 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Objects;
-
-public class MainActivity3 extends AppCompatActivity implements View.OnClickListener {
+public class ClickyClicky extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.clicky_clicky);
 
         Button let_a = findViewById(R.id.letter_a);
         Button let_b = findViewById(R.id.letter_b);

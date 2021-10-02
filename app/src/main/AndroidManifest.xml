@@ -10,23 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD21Fa_KristineUmeh">
         <activity
-            android:name=".MainActivity5"
+            android:name=".RecyclerViewLists"
             android:exported="true"
-            android:parentActivityName=".MainActivity4"/>
+            android:parentActivityName=".HelloWorld" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".ClickyClicky"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".BackButton" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".BackButton"
             android:exported="true"
-            android:parentActivityName=".MainActivity2" />
+            android:parentActivityName=".HelloWorld" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="true"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".HelloWorld"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

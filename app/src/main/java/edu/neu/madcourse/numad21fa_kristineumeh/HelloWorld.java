@@ -11,14 +11,14 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class HelloWorld extends AppCompatActivity {
 
     private static final String TAG = "Nnemka's Mobile App";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.hello_world);
         Objects.requireNonNull(getSupportActionBar()).setTitle("nu inc.");
         //make button do things
         //get button
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(MainActivity.this, MainActivity2.class);
+                intent = new Intent(HelloWorld.this, BackButton.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent2;
-                intent2 = new Intent(MainActivity.this, MainActivity4.class);
+                intent2 = new Intent(HelloWorld.this, RecyclerViewLists.class);
                 startActivity(intent2);
             }
         });
