@@ -40,6 +40,7 @@ public class DialogBox extends AppCompatDialogFragment {
               @Override
               public void onClick(DialogInterface dialogInterface, int i) {
 
+
               }
           });
 
@@ -61,7 +62,6 @@ public class DialogBox extends AppCompatDialogFragment {
         public void onDialogPositiveClick(DialogFragment dialog);
         public void onDialogNegativeClick(DialogFragment dialog);
     }
-
 
 
 }
