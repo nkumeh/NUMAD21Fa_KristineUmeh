@@ -8,38 +8,41 @@
 
     <RelativeLayout
         android:layout_width="397dp"
-        android:layout_height="126dp"
-        android:layout_margin="5dp">
+        android:layout_height="145dp"
+        android:layout_margin="5dp"
+        android:id="@id/relativeLayout">
 
         <TextView
             android:id="@+id/linkName"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="283dp"
-            android:layout_marginRight="283dp"
-            android:layout_marginBottom="108dp"
-            android:text="@string/link_name"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/linkUrl"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
+            android:layout_width="301dp"
+            android:layout_height="44dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="65dp"
-            android:layout_marginEnd="310dp"
-            android:layout_marginRight="310dp"
-            android:layout_marginBottom="68dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginRight="58dp"
+            android:text="@string/link_name"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/linkUrl"
+            android:layout_width="300dp"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="39dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginRight="58dp"
             android:text="@string/link_url"
             android:textSize="24sp" />
     </RelativeLayout>

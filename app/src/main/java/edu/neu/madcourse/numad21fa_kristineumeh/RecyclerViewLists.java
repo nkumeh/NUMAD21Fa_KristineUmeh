@@ -26,7 +26,7 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
     private RecyclerView recyclerView;
     private RviewAdapter rviewAdapter;
     private ConstraintLayout constraintLayout;
-
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
 
         constraintLayout = findViewById(R.id.constraintLayout);
 
-        FloatingActionButton fab = findViewById(R.id.fab1);
+        fab = findViewById(R.id.fab1);
         fab.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -47,11 +47,11 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
     }
 
 
-    public void snackBar() {
-        Snackbar snackbar = Snackbar.make(constraintLayout, "Action Successful", Snackbar.LENGTH_SHORT);
-        snackbar.show();
-
-    }
+//    public void snackBar() {
+//        Snackbar snackbar = Snackbar.make(constraintLayout, "Action Successful", Snackbar.LENGTH_SHORT);
+//        snackbar.show();
+//
+//    }
 
     private void init(Bundle savedInstanceState) {
         createRecyclerView();
