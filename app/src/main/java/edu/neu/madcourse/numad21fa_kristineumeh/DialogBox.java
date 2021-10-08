@@ -37,7 +37,7 @@ public class DialogBox extends AppCompatDialogFragment {
 
         linkName = (EditText) view.findViewById(R.id.editName);
         linkUrl = (EditText) view.findViewById(R.id.editUrl);
-        Button okButton = (Button) view.findViewById(R.id.addButton);
+//        Button okButton = (Button) view.findViewById(R.id.addButton);
         builder.setView(view).setTitle("Add new links here!")
         .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
