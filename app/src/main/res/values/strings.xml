@@ -27,5 +27,6 @@
     <string name="addNewLink">Add New Link</string>
     <string name="linkUrl">link url</string>
     <string name="url">url</string>
+    <string name="location">Location</string>
 
 </resources>

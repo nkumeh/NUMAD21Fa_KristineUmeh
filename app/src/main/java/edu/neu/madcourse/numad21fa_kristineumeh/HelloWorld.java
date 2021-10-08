@@ -54,5 +54,14 @@ public class HelloWorld extends AppCompatActivity {
             }
         });
 
+        Button button4 = (Button) findViewById(R.id.locationButton);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3;
+                intent3 = new Intent(HelloWorld.this, LocationActivity.class);
+                startActivity(intent3);
+            }
+        });
     }
 }

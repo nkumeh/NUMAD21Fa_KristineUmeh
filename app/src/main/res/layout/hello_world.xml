@@ -23,7 +23,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.368" />
 
     <Button
         android:id="@+id/myFirstButton"
@@ -31,7 +31,6 @@
         android:layout_height="69dp"
         android:text="@string/about"
         android:textSize="20sp"
-        android:textStyle="bold"
         android:visibility="visible"
         app:backgroundTint="@color/ic_launcher_nu_background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +47,6 @@
         android:layout_marginBottom="132dp"
         android:text="@string/more"
         android:textSize="20sp"
-        android:textStyle="bold"
         app:backgroundTint="@color/ic_launcher_nu_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,6 +66,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689" />
+        app:layout_constraintVertical_bias="0.562" />
+
+    <Button
+        android:id="@+id/locationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
