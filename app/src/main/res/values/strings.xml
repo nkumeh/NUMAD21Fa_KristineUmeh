@@ -26,5 +26,6 @@
     <string name="url">URL</string>
     <string name="name">Name</string>
     <string name="links">Links</string>
+    <string name="add_new_link">Add New Link</string>
 
 </resources>

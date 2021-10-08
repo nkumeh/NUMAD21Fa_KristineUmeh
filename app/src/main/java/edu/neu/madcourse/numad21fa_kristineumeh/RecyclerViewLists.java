@@ -47,11 +47,7 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
     }
 
 
-//    public void snackBar() {
-//        Snackbar snackbar = Snackbar.make(constraintLayout, "Action Successful", Snackbar.LENGTH_SHORT);
-//        snackbar.show();
-//
-//    }
+
 
     private void init(Bundle savedInstanceState) {
         createRecyclerView();
