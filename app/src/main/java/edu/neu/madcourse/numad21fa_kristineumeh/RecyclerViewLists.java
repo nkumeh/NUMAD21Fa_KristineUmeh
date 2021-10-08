@@ -78,5 +78,10 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
         rviewAdapter.notifyItemInserted(position);
     }
 
+    @Override
+    public void applyText(String linkName, String linkUrl) {
+        listOfLinks.get(0);
 
+
+    }
 }

@@ -24,6 +24,7 @@ public class DialogBox extends AppCompatDialogFragment {
 
     private EditText linkName;
     private EditText linkUrl;
+    private DialogBoxListener listener;
 
 
     @NonNull
@@ -46,13 +47,29 @@ public class DialogBox extends AppCompatDialogFragment {
         }).setPositiveButton("Add Link", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                linkName.getText().toString();
+                linkUrl.getText().toString();
 
             }
         });
 
+        return builder.create();
+    }
 
+    @Deprecated
+    public void onAttach(Context context) {
+        super.onAttach(context);
 
+        try {
+            listener = (DialogBoxListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + "implement please");
+        }
 
+    }
+
+    public interface DialogBoxListener {
+        void applyText(String linkName, String linkUrl);
 
 //        okButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -71,9 +88,5 @@ public class DialogBox extends AppCompatDialogFragment {
 //            }
 //        });
 
-        return builder.create();
-    }
-
-    public interface DialogBoxListener {
     }
 }
