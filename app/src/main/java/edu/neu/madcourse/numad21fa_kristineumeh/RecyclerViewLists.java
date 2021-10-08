@@ -23,9 +23,8 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
 
     private ArrayList<LinkCard> listOfLinks = new ArrayList<>();
 
-    private RecyclerView recyclerView;
+    private RecyclerView rcyclerView;
     private RviewAdapter rviewAdapter;
-    private ConstraintLayout constraintLayout;
     private FloatingActionButton fab;
 
     @Override
@@ -34,7 +33,6 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
         setContentView(R.layout.list_of_links);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        constraintLayout = findViewById(R.id.constraintLayout);
 
         fab = findViewById(R.id.fab1);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,8 +45,6 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
     }
 
 
-
-
     private void init(Bundle savedInstanceState) {
         createRecyclerView();
     }
@@ -56,8 +52,8 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
     private void createRecyclerView() {
         RecyclerView.LayoutManager rLayManager = new LinearLayoutManager(this);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
+        rcyclerView = findViewById(R.id.recyclerView);
+        rcyclerView.setHasFixedSize(true);
 
         rviewAdapter = new RviewAdapter(listOfLinks);
         LinkClickListener listCLickListener = new LinkClickListener() {
@@ -70,14 +66,14 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
         };
         rviewAdapter.setLinkListener(listCLickListener);
 
-        recyclerView.setAdapter(rviewAdapter);
-        recyclerView.setLayoutManager(rLayManager);
+        rcyclerView.setAdapter(rviewAdapter);
+        rcyclerView.setLayoutManager(rLayManager);
     }
 
     private void addItem(int position) {
 
         listOfLinks.add(position, new LinkCard( "No Logo item", "Item id: " + Math.abs(new Random().nextInt(100000)), false));
-        Snackbar.make(recyclerView,"Action Successful",Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(rcyclerView,"Action Successful",Snackbar.LENGTH_SHORT).show();
 
         rviewAdapter.notifyItemInserted(position);
     }
