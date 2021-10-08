@@ -1,10 +1,10 @@
 package edu.neu.madcourse.numad21fa_kristineumeh;
 
-public class RCyclerView {
+public class RcyclerView {
     private String linkUrl;
     private String linkName;
 
-    public RCyclerView(String linkUrl, String linkName) {
+    public RcyclerView(String linkUrl, String linkName) {
         this.linkUrl = linkUrl;
         this.linkName = linkName;
     }

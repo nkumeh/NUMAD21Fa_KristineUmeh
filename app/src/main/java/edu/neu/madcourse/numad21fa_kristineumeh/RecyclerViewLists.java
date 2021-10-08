@@ -25,7 +25,6 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
 
     private RecyclerView rcyclerView;
     private RviewAdapter rviewAdapter;
-    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,7 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
-        fab = findViewById(R.id.fab1);
+        FloatingActionButton fab = findViewById(R.id.fab1);
         fab.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -80,8 +79,6 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
 
     @Override
     public void applyText(String linkName, String linkUrl) {
-        listOfLinks.get(0);
-
 
     }
 }
