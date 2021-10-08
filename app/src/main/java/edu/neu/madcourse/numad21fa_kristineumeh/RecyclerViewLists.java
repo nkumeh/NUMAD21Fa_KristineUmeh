@@ -94,13 +94,4 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
 
     });
 
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
-        addItem(0);
-    }
-
-    @Override
-    public void onDialogNegativeClick(DialogFragment dialog) {
-
-    }
 }
