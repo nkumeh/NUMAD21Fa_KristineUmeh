@@ -13,8 +13,8 @@ public class RviewHolder extends RecyclerView.ViewHolder {
 
     public RviewHolder(View linkView, final LinkClickListener linkListener ) {
         super(linkView);
-        linkName = linkView.findViewById(R.id.linkName);
-        linkUrl = linkView.findViewById(R.id.linkUrl);
+        linkName = linkView.findViewById(R.id.cardDisplay_linkName);
+        linkUrl = linkView.findViewById(R.id.cardDisplay_linkUrl);
 
         linkView.setOnClickListener(new View.OnClickListener(){
 
