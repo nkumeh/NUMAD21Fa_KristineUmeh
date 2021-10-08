@@ -26,7 +26,7 @@
             android:layout_marginTop="28dp"
             android:layout_marginEnd="58dp"
             android:layout_marginRight="58dp"
-            android:text="@string/link_name"
+            android:text="@string/linkName"
             android:textSize="24sp" />
 
         <TextView
@@ -43,7 +43,7 @@
             android:layout_marginTop="84dp"
             android:layout_marginEnd="58dp"
             android:layout_marginRight="58dp"
-            android:text="@string/link_url"
+            android:text="@string/linkUrl"
             android:textSize="24sp" />
     </RelativeLayout>
 

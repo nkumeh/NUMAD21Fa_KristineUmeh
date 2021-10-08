@@ -39,7 +39,7 @@ public class RecyclerViewLists extends AppCompatActivity implements DialogBox.Di
 
             public void onClick(View view) {
                 DialogBox dialogBox = new DialogBox();
-                dialogBox.show(getSupportFragmentManager(), "Dialogue Box");;
+                dialogBox.show(getSupportFragmentManager(), "Dialogue Box");
             }
         });
     }

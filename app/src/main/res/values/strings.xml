@@ -18,14 +18,14 @@
     <string name="clickD">Pressed: D</string>
     <string name="clickE">Pressed: E</string>
     <string name="clickF">Pressed: F</string>
-    <string name="link_collector">LINK COLLECTOR</string>
-    <string name="link_collector_page">LINK COLLECTOR PAGE</string>
-    <string name="add_link">Add Link</string>
-    <string name="link_name">Link name</string>
-    <string name="link_url">URL</string>
-    <string name="url">URL</string>
+    <string name="linkCollector">LINK COLLECTOR</string>
+    <string name="linkCollectorPage">LINK COLLECTOR PAGE</string>
+    <string name="addLink">Add Link</string>
+    <string name="linkName">link name</string>
     <string name="name">Name</string>
     <string name="links">Links</string>
-    <string name="add_new_link">Add New Link</string>
+    <string name="addNewLink">Add New Link</string>
+    <string name="linkUrl">link url</string>
+    <string name="url">url</string>
 
 </resources>

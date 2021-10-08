@@ -37,24 +37,40 @@ public class DialogBox extends AppCompatDialogFragment {
         linkName = (EditText) view.findViewById(R.id.editName);
         linkUrl = (EditText) view.findViewById(R.id.editUrl);
         Button okButton = (Button) view.findViewById(R.id.addButton);
-        okButton.setOnClickListener(new View.OnClickListener() {
+        builder.setView(view).setTitle("Add new links here!")
+        .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                int pos = 0;
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        }).setPositiveButton("Add Link", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         });
 
-        okButton.setOnClickListener(view1 -> {
-            if (!linkName.getText().toString().isEmpty() &&
-                    !linkUrl.getText().toString().isEmpty()) {
-                Toast.makeText(requireActivity(), "Access granted", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(requireActivity(), "Please try again", Toast.LENGTH_SHORT).show();
-            }
-        });
 
-        builder.setView(view);
+
+
+
+//        okButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int pos = 0;
+//
+//            }
+//        });
+
+//        okButton.setOnClickListener(view1 -> {
+//            if (!linkName.getText().toString().isEmpty() &&
+//                    !linkUrl.getText().toString().isEmpty()) {
+//                Toast.makeText(requireActivity(), "Access granted", Toast.LENGTH_SHORT).show();
+//            } else {
+//                Toast.makeText(requireActivity(), "Please try again", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
         return builder.create();
     }
 
