@@ -28,5 +28,6 @@
     <string name="linkUrl">link url</string>
     <string name="url">url</string>
     <string name="location">Location</string>
+    <string name="get_location">Get Location</string>
 
 </resources>

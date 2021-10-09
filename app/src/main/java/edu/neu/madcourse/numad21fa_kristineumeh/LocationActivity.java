@@ -5,18 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import java.io.IOException;
@@ -36,7 +45,7 @@ public class LocationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_location);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        locationButton = findViewById(R.id.locationButton);
+        locationButton = findViewById(R.id.getLocation);
         tv1 = findViewById(R.id.showLongitude);
         tv2 = findViewById(R.id.showLatitude);
 
@@ -45,39 +54,48 @@ public class LocationActivity extends AppCompatActivity {
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ActivityCompat.checkSelfPermission(
-                        LocationActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) ==
-                        PackageManager.PERMISSION_GRANTED) {
-                    getLocation();
-                } else {
-                    ActivityCompat.requestPermissions(LocationActivity.this,
-                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
-                }
-            }
-        });
-    }
-
-    private void getLocation() {
-        fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new onCompleteListener<Location>(){
-            @Override
-                public void onComplete(@NonNull Task<Location> task) {
-                Location location = task.getResult();
-                if(location != null){
-                    Geocoder geocoder = new Geocoder(LocationActivity.this, Locale.getDefault());
-                    try {
-                        List<Address> addresses = geocoder.getFromLocation(
-                                location.getLatitude(), location.getLongitude(), 1);
-
-                        tv1.setText(Html.fromHtml("<font color='#black'><b>Latitude:" +
-                                "</b><br></font" + addresses.get(0).getLatitude()));
-                        tv2.setText(Html.fromHtml("<font color='#black'><b>Longitude:" +
-                                "</b><br></font" + addresses.get(0).getLongitude()));
-
-                    } catch (IOException e){
-                        e.printStackTrace();
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ActivityCompat.checkSelfPermission(
+                            LocationActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                            PackageManager.PERMISSION_GRANTED) {
+                        getLocation();
+                    } else {
+                        ActivityCompat.requestPermissions(LocationActivity.this,
+                                new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
                     }
                 }
             }
         });
     }
+
+    @SuppressLint({"MissingPermission", "SetTextI18n"})
+
+    private void getLocation() {
+        fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+           @Override
+            public void onComplete(@NonNull Task<Location> task) {
+                Location location = task.getResult();
+                if (location != null) {
+                    tv1.setText(String.valueOf(location.getLongitude()));
+                    tv2.setText(String.valueOf(location.getLatitude()));
+                }else{
+                    LocationRequest locationRequest = new LocationRequest()
+                            .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                            .setInterval(10000)
+                            .setFastestInterval(1000)
+                            .setNumUpdates(1);
+                    LocationCallback locationCallback = new LocationCallback() {
+                        @Override
+                        public void onLocationResult(@NonNull LocationResult locationResult) {
+                            super.onLocationResult(locationResult);
+                            tv1.setText(String.valueOf(location.getLongitude()));
+                            tv2.setText(String.valueOf(location.getLatitude()));
+                        }
+                    };
+                    fusedLocationProviderClient.requestLocationUpdates(locationRequest,locationCallback, Looper.myLooper());
+                }
+            }
+        });
+    }
+
 }
