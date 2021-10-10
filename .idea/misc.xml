@@ -5,7 +5,7 @@
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_link.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_location.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_location.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main3.xml" value="0.25" />
@@ -14,7 +14,7 @@
         <entry key="app/src/main/res/layout/activity_main6.xml" value="0.1" />
         <entry key="app/src/main/res/layout/back_button_test.xml" value="0.1" />
         <entry key="app/src/main/res/layout/clicky_clicky.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/dialog_display.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialog_display.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialogue_display.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialogue_layout.xml" value="0.17980072463768115" />
         <entry key="app/src/main/res/layout/hello_world.xml" value="0.165" />

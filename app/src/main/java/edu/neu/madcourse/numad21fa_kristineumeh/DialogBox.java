@@ -77,7 +77,7 @@ public class DialogBox extends AppCompatDialogFragment {
 //
 //            }
 //        });
-
+//
 //        okButton.setOnClickListener(view1 -> {
 //            if (!linkName.getText().toString().isEmpty() &&
 //                    !linkUrl.getText().toString().isEmpty()) {
