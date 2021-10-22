@@ -31,5 +31,8 @@
     <string name="get_location">Get Location</string>
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
+    <string name="search">search</string>
+    <string name="enter_a_city">Enter a City</string>
+    <string name="weather_forecast">Weather Forecast</string>
 
 </resources>
