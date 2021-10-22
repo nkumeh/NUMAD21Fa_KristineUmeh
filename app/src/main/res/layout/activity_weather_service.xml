@@ -11,11 +11,13 @@
     tools:context=".WeatherService">
 
   <TextView
-      android:id="@+id/get_forcast"
+      android:id="@+id/get_forecast"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:background="@color/ic_launcher_nu_background"
       android:gravity="center"
       android:text="@string/weather_forecast"
+      android:textColor="@color/white"
       android:textSize="40sp" />
 
   <LinearLayout
@@ -36,7 +38,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/search_button"
+        android:id="@+id/searchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"

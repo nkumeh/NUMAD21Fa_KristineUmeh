@@ -65,7 +65,7 @@ public class HelloWorld extends AppCompatActivity {
         });
 
         Button button5 = (Button) findViewById(R.id.weatherButton);
-        button4.setOnClickListener(new View.OnClickListener() {
+        button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent4;
