@@ -17,27 +17,24 @@
       android:background="@color/ic_launcher_nu_background"
       android:gravity="center"
       android:text="@string/weather_forecast"
+      android:padding="16dp"
       android:textColor="@color/white"
       android:textSize="40sp" />
 
-  <LinearLayout
+
+  <EditText
+      android:id="@+id/city_input"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:gravity="center"
-      android:orientation="vertical">
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:ems="10"
+      android:hint="@string/enter_a_city"
+      android:inputType="textPersonName"
+      android:padding="16dp"
+      android:textColor="@color/black"
+      android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/city_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="@string/enter_a_city"
-        android:inputType="textPersonName"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
-
-    <Button
+  <Button
         android:id="@+id/searchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,18 +42,17 @@
         android:background="@color/black"
         android:text="@string/search"
         android:textSize="24sp"
+        android:padding="16dp"
         android:textColor="@color/white"
-        app:background="@null"
-        android:onClick="getWeatherDetails"/>
+        android:onClick="getWeatherDetails"
+        app:background="@null"/>
 
-    <TextView
-        android:id="@+id/weatherDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="138dp"
-        android:textSize="34sp"
-        android:gravity="center_horizontal"
-        android:textColor="@color/black"/>
-
-  </LinearLayout>
+  <TextView
+      android:id="@+id/weatherDisplay"
+      android:layout_width="match_parent"
+      android:layout_height="138dp"
+      android:gravity="center_horizontal"
+      android:textColor="@color/black"
+      android:textSize="34sp" />
 
 </LinearLayout>

@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class WeatherService extends AppCompatActivity {
@@ -39,8 +40,6 @@ public class WeatherService extends AppCompatActivity {
         cityName = findViewById(R.id.city_input);
         weatherDisplay = findViewById(R.id.weatherDisplay);
         getWeather = findViewById(R.id.searchButton);
-
-
     }
 
     public void getWeatherDetails(View view) {
@@ -48,27 +47,26 @@ public class WeatherService extends AppCompatActivity {
         String city = cityName.getText().toString().trim();
         if (city.equals("")) {
             Toast toast = Toast.makeText(getApplicationContext(),
-                    "Please input value!", Toast.LENGTH_SHORT);
+                    "Empty value!", Toast.LENGTH_SHORT);
             toast.show();
         } else {
-            tempUrl = rootUrl + "?q" + city + "&appID" + appID;
+            tempUrl = rootUrl + "?q=" + city + "&appID=" + appID;
         }
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, rootUrl,
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, tempUrl,
                 null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
                     JSONObject object = response.getJSONObject("main");
                     String temperature = object.getString("temp");
-                    double kelvin_convert = 273.15;
-                    double temp = Double.parseDouble(temperature)-kelvin_convert;
+                    Double kelvin_convert = Double.parseDouble(temperature)-273.15;
 
-                    weatherDisplay.setText(temperature.toString().substring(0,5));
+                    weatherDisplay.setText(kelvin_convert.toString().substring(0,5) + "°C");
                 } catch (JSONException exception) {
                     Toast toast = Toast.makeText(getApplicationContext(),
-                                exception.getMessage(), Toast.LENGTH_SHORT);
+                                exception.getMessage() , Toast.LENGTH_SHORT);
                         toast.show();
                 }
             }
@@ -76,7 +74,7 @@ public class WeatherService extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast toast = Toast.makeText(getApplicationContext(),
-                        error.toString().trim(), Toast.LENGTH_SHORT);
+                        "Please Enter Valid City", Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
