@@ -43,7 +43,6 @@
         android:background="@color/black"
         android:text="@string/search"
         android:textColor="@color/white"
-        android:onClick="getWeatherDetails"
         app:background="@null" />
 
   </LinearLayout>
