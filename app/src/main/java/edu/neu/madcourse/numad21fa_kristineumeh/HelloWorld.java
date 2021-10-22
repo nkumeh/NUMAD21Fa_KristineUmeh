@@ -63,5 +63,15 @@ public class HelloWorld extends AppCompatActivity {
                 startActivity(intent3);
             }
         });
+
+        Button button5 = (Button) findViewById(R.id.weatherButton);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4;
+                intent4 = new Intent(HelloWorld.this, WeatherService.class);
+                startActivity(intent4);
+            }
+        });
     }
 }
