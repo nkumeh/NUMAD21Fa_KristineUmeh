@@ -34,5 +34,6 @@
     <string name="search">search</string>
     <string name="enter_a_city">Enter a City</string>
     <string name="weather_forecast">Weather Forecast</string>
+    <string name="weather_page">Weather Page</string>
 
 </resources>

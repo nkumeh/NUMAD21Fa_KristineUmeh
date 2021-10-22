@@ -16,7 +16,8 @@
         android:theme="@style/Theme.NUMAD21Fa_KristineUmeh">
         <activity
             android:name=".WeatherService"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".HelloWorld" />
         <activity
             android:name=".LocationActivity"
             android:exported="true"

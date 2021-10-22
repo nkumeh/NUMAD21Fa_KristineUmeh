@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,25 +15,34 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public class WeatherService extends AppCompatActivity {
     EditText cityName;
     TextView getForecast;
-    private final String url = "http://api.openweathermap.org/data/2.5/weather";
+    Button getWeather;
+
+    private final String rootUrl = "https://api.openweathermap.org/data/2.5/weather";
     private final String appID = "b837e58d247c58b4343c377d614e4930";
-    DecimalFormat decimalFormat = new DecimalFormat("$.$");
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_service);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
         cityName = findViewById(R.id.city_input);
-        getForecast = findViewById(R.id.get_forcast);
+        getForecast = findViewById(R.id.weatherDisplay);
+        getWeather = findViewById(R.id.weatherButton);
     }
 
     public void getWeatherDetails(View view) {
@@ -43,25 +53,32 @@ public class WeatherService extends AppCompatActivity {
                     "Please input value!", Toast.LENGTH_SHORT);
             toast.show();
         } else {
-            tempUrl = url + "?q" + city + "&appID" + appID;
+            tempUrl = rootUrl + "?q" + city + "&appID" + appID;
         }
-        StringRequest stringRequest =
-                new StringRequest(Request.Method.POST, tempUrl, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("response", response);
-                    }
-                }, new Response.ErrorListener() {
 
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                error.toString().trim(), Toast.LENGTH_SHORT);
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, rootUrl,
+                null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONObject object = response.getJSONObject("main");
+                    String temperature = object.getString("temp");
+                    getForecast.setText(temperature);
+                } catch (JSONException exception) {
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                                exception.getMessage(), Toast.LENGTH_SHORT);
                         toast.show();
-                    }
-                });
-
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        requestQueue.add(stringRequest);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        error.toString().trim(), Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+        queue.add(request);
     }
 }

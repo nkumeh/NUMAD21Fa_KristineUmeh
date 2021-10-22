@@ -84,7 +84,7 @@
         android:id="@+id/weatherButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weather Page"
+        android:text="@string/weather_page"
         android:textSize="20sp"
         app:backgroundTint="@color/ic_launcher_nu_background"
         app:layout_constraintBottom_toBottomOf="parent"
